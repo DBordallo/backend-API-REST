@@ -44,3 +44,21 @@ export const updateBrand = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
+
+// -------------DELETE-----------------
+
+export const deleteBrand = async (req, res) => {
+    const { id } = req.params; // Obtén el ID de los parámetros de la URL
+    try {
+        const deleted = await BrandModel.destroy({
+            where: { id: id }
+        });
+        if (deleted) {
+            res.json({ message: 'Brand deleted successfully' });
+        } else {
+            res.status(404).json({ message: 'Brand not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
