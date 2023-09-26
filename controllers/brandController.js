@@ -14,6 +14,25 @@ export const getAllBrands = async (req, res) => {
     }
 }
 
+
+// -------------GET by Unit-----------------
+
+export const getBrandByUnit = async (req, res) => {
+    const { id } = req.params; 
+    try {
+        const brand = await BrandModel.findOne({
+            where: { id: id }
+        });
+        if (brand) {
+            res.json(brand);
+        } else {
+            res.status(404).json({ message: 'Brand not found for the specified unit' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
 // -------------POST-----------------
 
 export const createBrand = async(req, res) => {
