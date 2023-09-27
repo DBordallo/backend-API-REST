@@ -26,7 +26,7 @@ export const getBrandByUnit = async (req, res) => {
         if (brand) {
             res.json(brand);
         } else {
-            res.status(404).json({ message: 'Brand not found for the specified unit' });
+            res.status(404).json({ message: 'Brand not found' });
         }
     } catch (error) {
         res.status(500).json({ message: error.message });

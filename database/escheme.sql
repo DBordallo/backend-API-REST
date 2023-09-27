@@ -2,32 +2,32 @@ CREATE database products_app;
 
 USE products_app;
 
-CREATE TABLE `brand` (
+CREATE TABLE `brands` (
   `id` INT AUTO_INCREMENT, PRIMARY KEY (id),
   `brand_name` varchar(255) NOT NULL,
   createAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
 updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
 
 
-CREATE TABLE `product` (
+CREATE TABLE `products` (
   `id` INT AUTO_INCREMENT, PRIMARY KEY (id),
   `product_name` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `price` integer,
   `stock` integer,
-  `brand_id` integer,
+  `brands_id` integer,
   createAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
 updateAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);
 
 
-ALTER TABLE `product` ADD FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`);
+ALTER TABLE `products` ADD FOREIGN KEY (`brands_id`) REFERENCES `brands` (`id`);
 
 
-INSERT into brand(brand_name)
+INSERT into brands(brand_name)
 VALUES("Sony"), ("Samsung"), ("LG"), ("Toshiba"), ("Acer"), ("HP");
 
 -- Productos para Sony
-INSERT INTO product (product_name, description, price, stock, brand_id)
+INSERT INTO products (product_name, description, price, stock, brands_id)
 VALUES
   ('Sony Xperia 1 III', 'Teléfono inteligente con pantalla 4K y cámara Zeiss', 999.99, 15, 1),
   ('Sony Bravia XR A90J', 'Televisor OLED 4K con procesador Cognitive XR', 2499.99, 10, 1),
@@ -36,7 +36,7 @@ VALUES
   ('Sony Alpha 7 IV', 'Cámara sin espejo de fotograma completo con 33 MP', 2299.99, 5, 1);
 
 -- Productos para Samsung
-INSERT INTO product (product_name, description, price, stock, brand_id)
+INSERT INTO products (product_name, description, price, stock, brands_id)
 VALUES
   ('Samsung Galaxy Z Fold 3', 'Teléfono plegable con pantalla flexible', 1499.99, 12, 2),
   ('Samsung Neo QLED QN900A', 'Televisor 8K con Mini LED y Quantum HDR', 3499.99, 6, 2),
@@ -45,7 +45,7 @@ VALUES
   ('Samsung Portable SSD X5', 'Disco SSD portátil Thunderbolt 3 para alta velocidad', 399.99, 20, 2);
 
 -- Productos para LG
-INSERT INTO product (product_name, description, price, stock, brand_id)
+INSERT INTO products (product_name, description, price, stock, brands_id)
 VALUES
   ('LG Velvet 2 Pro', 'Teléfono 5G con pantalla OLED y cámara de 48 MP', 799.99, 18, 3),
   ('LG OLED G1 Gallery', 'Televisor OLED 4K delgadamente montado en la pared', 2999.99, 10, 3),
@@ -54,7 +54,7 @@ VALUES
   ('LG UltraSlim Portable DVD Writer', 'Unidad de DVD externa para computadoras', 49.99, 40, 3);
 
 -- Productos para Toshiba
-INSERT INTO product (product_name, description, price, stock, brand_id)
+INSERT INTO products (product_name, description, price, stock, brands_id)
 VALUES
   ('Toshiba Tecra X50', 'Laptop empresarial ultradelgada con CPU Intel', 999.99, 10, 4),
   ('Toshiba Fire TV', 'Televisor inteligente Fire TV 4K HDR', 499.99, 15, 4),
@@ -63,7 +63,7 @@ VALUES
   ('Toshiba Dynabook Portégé', 'Laptop de alta gama para negocios y productividad', 1199.99, 8, 4);
 
 -- Productos para Acer
-INSERT INTO product (product_name, description, price, stock, brand_id)
+INSERT INTO products (product_name, description, price, stock, brands_id)
 VALUES
   ('Acer Predator Helios 300', 'Laptop para juegos con GPU NVIDIA RTX', 1299.99, 8, 5),
   ('Acer Nitro VG271U', 'Monitor de juegos IPS 1440p con frecuencia de actualización rápida', 399.99, 20, 5),
@@ -72,7 +72,7 @@ VALUES
   ('Acer Predator Orion 9000', 'PC de escritorio para juegos con CPU Intel Core i9', 2999.99, 5, 5);
 
 -- Productos para HP
-INSERT INTO product (product_name, description, price, stock, brand_id)
+INSERT INTO products (product_name, description, price, stock, brands_id)
 VALUES
   ('HP Spectre x360', 'Laptop convertible premium con pantalla OLED', 1499.99, 12, 6),
   ('HP ENVY Photo 7155', 'Impresora fotográfica todo en uno con Wi-Fi', 199.99, 30, 6),
