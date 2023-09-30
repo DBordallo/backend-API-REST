@@ -1,4 +1,5 @@
 import BrandModel from "../models/brandModel.js";
+import ProductModel from "../models/productModel.js";
 
 //------------CRUD-----------------
 
@@ -48,7 +49,7 @@ export const createBrand = async(req, res) => {
 
 
 export const updateBrand = async (req, res) => {
-    const { id } = req.params; // Obtén el ID de los parámetros de la URL
+    const { id } = req.params; 
     try {
         const [updated] = await BrandModel.update(req.body, {
             where: { id: id }
@@ -67,7 +68,7 @@ export const updateBrand = async (req, res) => {
 // -------------DELETE-----------------
 
 export const deleteBrand = async (req, res) => {
-    const { id } = req.params; // Obtén el ID de los parámetros de la URL
+    const { id } = req.params; 
     try {
         const deleted = await BrandModel.destroy({
             where: { id: id }
