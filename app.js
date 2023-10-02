@@ -13,6 +13,7 @@ app.use(cors())
 app.use(express.json())
 app.use('/brand', brandRouter)
 app.use('/products', productRouter)
+app.use('/brand/:id/', brandRouter)
 
 try{
 	await db.authenticate()

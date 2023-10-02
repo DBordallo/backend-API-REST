@@ -15,6 +15,25 @@ export const getAllBrands = async (req, res) => {
     }
 }
 
+//-------------------GET PRODUCTS BY BRAND-----------------------------
+
+export const getProductsByBrand = async (req, res) => {
+    const { id } = req.params; 
+    try {
+        const products = await ProductModel.findAll({
+            where: { brands_id: id }
+        });
+        
+        if (products && products.length > 0) {
+            res.json(products);
+        } else {
+            res.status(404).json({ message: 'Products not found for this brand' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
 
 // -------------GET by Unit-----------------
 
