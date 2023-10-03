@@ -1,6 +1,11 @@
-# Products App
+# REST API * CRUD * App
 
 This repository contains the code for a simple Products App. The app allows you to manage brands and products associated with those brands. It provides basic CRUD (Create, Read, Update, Delete) operations for both brands and products.
+
+## Puedes ejecutar la colección de Postman haciendo clic en el siguiente botón:
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29760269-5359b333-c15e-46f6-a6db-1b760d195157?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29760269-5359b333-c15e-46f6-a6db-1b760d195157%26entityType%3Dcollection%26workspaceId%3Dd98c3973-e89c-4b40-a5d9-217ddcf29bf7)
+
 
 ## Table of Contents
 
