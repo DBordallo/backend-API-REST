@@ -1,10 +1,12 @@
-# REST API * CRUD * App
+# REST API * CRUD * 
+![Logo](https://www.devbabu.com/wp-content/uploads/CRUD-API-in-Node-JS-with-MySQL-database-768x432.png)
 
 This repository contains the code for a simple Products App. The app allows you to manage brands and products associated with those brands. It provides basic CRUD (Create, Read, Update, Delete) operations for both brands and products.
 
 ## Puedes ejecutar la colección de Postman haciendo clic en el siguiente botón:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29760269-5359b333-c15e-46f6-a6db-1b760d195157?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29760269-5359b333-c15e-46f6-a6db-1b760d195157%26entityType%3Dcollection%26workspaceId%3Dd98c3973-e89c-4b40-a5d9-217ddcf29bf7)
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29760269-5359b333-c15e-46f6-a6db-1b760d195157?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29760269-5359b333-c15e-46f6-a6db-1b760d195157%26entityType%3Dcollection%26workspaceId%3Dd98c3973-e89c-4b40-a5d9-217ddcf29bf7)                 ![Logo](https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2021/12/image-37.png?w=390&ssl=1)
 
 
 ## Table of Contents
@@ -76,8 +78,10 @@ DELETE /products/:id: Delete a product by ID.
 
 The repository includes unit tests for the API endpoints. You can run the tests using the following command:  
 
-     ```sh
+  ```sh
     npm test
+  ```
+    
 Happy coding!
 
 
