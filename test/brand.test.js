@@ -1,8 +1,7 @@
 import request from "supertest";
 import { app, server } from "../app.js";
 import db from '../database/db.js'
-//import { response } from "express";
-//import BrandModel from "../models/brandModel.js"
+
 
 
 describe ("test CRUD brands",()=>{
